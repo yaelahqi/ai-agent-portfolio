@@ -13,7 +13,7 @@ This portfolio showcases a production-grade AI agent system built with **Hermes 
 ### Key Highlights
 
 - 🚀 **24/7 Production Runtime** - Continuous operation on cloud infrastructure
-- 🤖 **Multi-Model Orchestration** - GPT-4, Claude, Gemini, Mixtral, Llama
+- 🤖 **Multi-Model Orchestration** - Claude, MiMo, Gemini, Mixtral, Llama via 9router
 - 📱 **Cross-Platform** - Telegram, Discord, CLI, Web interfaces
 - 🎯 **Real-World Applications** - Trading bots, VTuber AI, automation
 - 📊 **High Volume** - 100K-500K tokens/day processing
@@ -37,8 +37,8 @@ graph TB
     end
     
     subgraph "AI Models"
-        GPT[GPT-4o]
-        CLAUDE[Claude 3.5]
+        CLAUDE[Claude Series]
+        MIMO[MiMo v2.5]
         GEMINI[Gemini Pro]
         MIXTRAL[Mixtral 8x7B]
         LLAMA[Llama 3.3]
@@ -66,8 +66,8 @@ graph TB
     GW --> RT
     RT --> SM
     
-    SM --> GPT
     SM --> CLAUDE
+    SM --> MIMO
     SM --> GEMINI
     SM --> MIXTRAL
     SM --> LLAMA
@@ -94,11 +94,11 @@ graph TB
 ### AI Models & Providers
 | Provider | Models | Usage |
 |----------|--------|-------|
-| OpenAI | GPT-4o, GPT-4-turbo | Primary reasoning, vision |
-| Anthropic | Claude 3.5 Sonnet | Code generation, analysis |
+| Anthropic (via Kiro/9router) | Claude Sonnet 4.6, Claude Opus 4.6 | Primary reasoning, code generation |
+| Xiaomi MiMo (via OpenRouter/9router) | MiMo v2.5, MiMo v2.5-Pro, MiMo v2-Omni | Math reasoning, cost-effective inference |
 | Google | Gemini Pro, Gemini Flash | Multimodal, fast inference |
 | Groq | Mixtral 8x7B, Llama 3.3 | High-speed inference |
-| Xiaomi | MiMo V2.5 | Cost-effective alternative |
+| Pioneer | Claude Haiku 4.5, DeepSeek | Fallback routing |
 
 ### Integrations
 - **Messaging:** Telegram Bot API, Discord.js
